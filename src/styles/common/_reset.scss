@@ -1,0 +1,60 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  padding: 0;
+  line-height: 1.5;
+  letter-spacing: -.2px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: .8rem;
+  }
+}
+
+a {
+  color: #ff3a28;
+  transition: color .3s;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+hr {
+  border: 0;
+  border-bottom: solid 1px #eee;
+  margin: 2.5rem 0;
+}
+
+textarea,
+input {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea {
+  resize: none;
+}

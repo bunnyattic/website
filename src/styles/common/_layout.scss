@@ -1,0 +1,36 @@
+.inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 20px;
+  box-sizing: border-box;
+
+  @media screen and (min-width: 1200px) {
+    padding: 100px 0;
+  }
+}
+
+.section {
+  &-title {
+    color: #231f20;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    word-break: keep-all;
+    text-transform: uppercase;
+    display: block;
+
+    &:not(:first-of-type) {
+      margin-top: 50px;
+      padding-top: 50px;
+      border-top: 1px solid #ccc;
+    }
+  } // .section-title
+
+  &-text {
+    margin-top: 20px;
+    color: #222;
+    word-break: keep-all;
+    font-size: 16px;
+  } // .section-text
+}

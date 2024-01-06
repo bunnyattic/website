@@ -1,0 +1,72 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 100;
+  transition: background-color .2s;
+
+  &.fixed {
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+  }
+
+  .logo {
+    &-container {
+      flex: 1;
+    } // .logo-container
+
+    &-link {
+      display: inline-block;
+      font-size: 32px;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      vertical-align: top;
+    } // .logo-link
+  }
+
+  .nav {
+    &-list {
+      display: flex;
+    } // .nav-list
+
+    &-link {
+      padding: 20px 10px;
+      box-sizing: border-box;
+      display: inline-block;
+      text-decoration: none;
+      position: relative;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #222;
+      text-transform: uppercase;
+
+      &::after {
+        position: absolute;
+        left: 50%;
+        bottom: 15px;
+        transform: translateX(-50%);
+        display: block;
+        width: 0;
+        height: 1px;
+        background-color: #000;
+        content: '';
+        transition: width .2s;
+      }
+
+      &:hover {
+        color: #000;
+
+        &::after {
+          width: calc(100% - 20px);
+        }
+      }
+    } // .nav-link
+  }
+}

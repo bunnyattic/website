@@ -1,0 +1,81 @@
+.about {
+  &-section {
+    position: relative;
+    padding: 50px 20px 50px 0;
+    margin: 100px 0 100px 0;
+    box-sizing: border-box;
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: center;
+      padding: 100px 0;
+      margin: 0;
+    }
+
+    &::before {
+      margin-left: -20px;
+      display: block;
+      width: 100%;
+      padding-top: 100%;
+      background: url("../../assets/images/image-about.png") no-repeat center center / contain;
+      content: '';
+
+      @media screen and (min-width: 1200px) {
+        width: 50%;
+        padding-top: 50%;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      display: block;
+      width: 80%;
+      height: 16.4%;
+      z-index: -1;
+      background: url("../../assets/images/title-about.png") no-repeat center center / contain;
+      content: '';
+
+      @media screen and (min-width: 1200px) {
+        top: 80px;
+        width: 880px;
+        height: 145px;
+      }
+    }
+  } // .about-section
+
+  &-inner {
+    padding: 30px 20px 0;
+
+    @media screen and (min-width: 1200px) {
+      padding: 100px;
+      flex: 1;
+    }
+  } // .about-inner
+
+  &-list {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  } // .about-list
+
+  &-link {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    $icons: (blog, youtube, github, email);
+    @each $icon in $icons {
+      &.#{$icon} {
+        background: url("../../assets/icons/icon-#{$icon}.svg") no-repeat center center / contain;
+      }
+    }
+  } // .about-link
+}
